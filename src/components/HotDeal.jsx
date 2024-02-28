@@ -36,16 +36,23 @@ function HotDeal() {
           </p>
 
           <div className="mt-40 gap-10 flex">
-            <button className="cursor-pointer" onClick={nextSlide}>
+            {/* Conditionally render arrow buttons based on screen size */}
+            <button
+              className="cursor-pointer hidden lg:flex"
+              onClick={nextSlide}
+            >
               &lt;
             </button>
-            <button className="cursor-pointer" onClick={prevSlide}>
+            <button
+              className="cursor-pointer hidden lg:flex"
+              onClick={prevSlide}
+            >
               &gt;
             </button>
           </div>
         </div>
         {/* CARDS */}
-        <div className="col-span-1 grid grid-cols-1 lg:grid-cols-4">
+        <div className="col-span-1 grid grid-cols-2 sm:grid-cols-2">
           <div className="w-full flex justify-center gap-20">
             {displayedCards.map((card) => (
               <div key={card.id} className="text-start">
