@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch, FaBars, FaDownload } from "react-icons/fa";
+// import { FaSearch, FaBars, FaDownload } from "-icons/fa";
 
 function Header() {
   return (
@@ -8,7 +8,7 @@ function Header() {
         <h1 className="text-[#00d089] text-[23px] font-bold mr-4">
           TestValley
         </h1>
-        <FaBars color="#00d089" size={13} className="hidden sm:block" />
+        {/* <FaBars color="#00d089" size={13} className="hidden sm:block" /> */}
         <h1 className="text-[#00d089] ml-2 hidden sm:block ">카테고리</h1>
       </div>
       <div className="relative flex justify-center w-full mb-4 sm:mb-0">
@@ -21,12 +21,12 @@ function Header() {
           />
           {/* Search icon */}
           <div className="sm:hidden absolute inset-y-3 left-0 items-center pl-3 pointer-events-none">
-            <FaSearch />
+            {/* <FaSearch /> */}
           </div>
         </div>
       </div>
       <div className="hidden sm:flex justify-center w-full gap-2">
-        <FaDownload />
+        {/* <FaDownload /> */}
         <h1>로그인 / 회원가입</h1>
       </div>
     </div>
