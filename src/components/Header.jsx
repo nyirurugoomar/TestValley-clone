@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch, FaBars, FaDownload } from "react-icons/fa"; // Import the search icon from react-icons library
+import { FaSearch, FaBars, FaDownload } from "react-icons/fa";
 
 function Header() {
   return (

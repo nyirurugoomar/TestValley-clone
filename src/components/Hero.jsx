@@ -4,7 +4,7 @@ import imageData from "../data/images.json";
 
 function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth); // Initialize using function
   const [autoSlideInterval, setAutoSlideInterval] = useState(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function HeroSection() {
       setAutoSlideInterval(
         setInterval(() => {
           goToNextImage();
-        }, 5000) // Change the interval duration as needed
+        }, 5000)
       );
     };
 
@@ -66,7 +66,7 @@ function HeroSection() {
         className="flex transition-transform ease-in-out duration-300"
         style={{
           transform: `translateX(-${
-            currentImageIndex * 100 + windowWidth * 0.25 // Translate to show half of the previous image
+            currentImageIndex * 100 + windowWidth * 0.25
           }%)`,
         }}
       >
@@ -78,7 +78,7 @@ function HeroSection() {
             className="h-auto w-full object-cover"
             style={{
               marginLeft: index === 0 ? `-${windowWidth * 0.7}px` : 0,
-            }} // Adjust margin for the first image
+            }}
           />
         ))}
       </div>
